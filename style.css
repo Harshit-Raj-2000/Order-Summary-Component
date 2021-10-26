@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root{
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --veryPaleBlue:hsl(225, 100%, 98%);
+    --desaturatedBlue:hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container{
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-color: var(--paleBlue);
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#top-card{
+    width: 450px;
+    height: 220px;
+    margin: 0 10px;
+    border-radius: 10px 10px 0 0;
+    background-image: url(./images/illustration-hero.svg);
+}
+
+#bottom-card{
+width:450px;
+height: 400px;
+margin: 0px 10px;
+padding: 20px;
+background-color: var(--veryPaleBlue);
+border-radius: 0px 0px 10px 10px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+
+}
+
+#order-head{
+    font-weight: 900; 
+}
+
+p{
+    font-size: 16px;
+    font-weight: 500;
+    color: var( --desaturatedBlue);
+    text-align: center;
+    padding: 0px 30px;
+}
+
+#payment-button{
+    width:90%;
+    padding: 10px;
+    background-color: var(--brightBlue);
+    color: var(--veryPaleBlue);
+    border: 0px;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 0 20px 2px var(--paleBlue);
+}
+
+#payment-button:hover{
+    cursor: pointer;
+    background-color: rgb(148, 87, 181);
+}
+
+#cancel-link{
+    text-decoration: none;
+}
+
+#cancel-link:hover{
+    color:var(--darkBlue);
+}
+
+.plan-container{
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.left{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-between;
+}
+
+#plan-duration{
+    font-weight: 700;
+    color: black
+}
+
+#plan-cost{
+    color: var( --desaturatedBlue);
+}
+
+.right a{
+    color: var(--brightBlue);
+    font-weight: 700;
+}
+
+.right a:hover{
+    text-decoration: none;
+    color: var(--darkBlue);
+    font-weight: 500;
+}
+
+@media screen and (max-width:500px){
+
+
+    #top-card{
+        transform: scale(0.75, 0.75);
+    }
+    #bottom-card{
+        /* transform: ; */
+        transform: scale(0.75,0.75) translateY(-105px);
+    }
+
+}
